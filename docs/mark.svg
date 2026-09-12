@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TOEPUNK">
+  <rect width="64" height="64" rx="14" fill="#FFF4D6"/>
+  <circle cx="10" cy="10" r="1.1" fill="#111111"/>
+  <circle cx="28" cy="8" r="1.1" fill="#111111"/>
+  <circle cx="46" cy="12" r="1.1" fill="#111111"/>
+  <circle cx="14" cy="54" r="1.1" fill="#111111"/>
+  <circle cx="54" cy="50" r="1.1" fill="#111111"/>
+  <rect x="16" y="16" width="36" height="36" rx="10" fill="#111111"/>
+  <rect x="13" y="13" width="36" height="36" rx="10" fill="#FF2E93" stroke="#111111" stroke-width="4"/>
+  <text x="31" y="40" text-anchor="middle" fill="#C8FF3D" font-family="Impact, Haettenschweiler, 'Arial Black', sans-serif" font-size="28" transform="rotate(-8 31 31)">X</text>
+</svg>
