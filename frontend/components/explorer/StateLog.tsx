@@ -9,11 +9,11 @@ export function StateLog({ logs }: { logs: TdLogEntry[] }) {
   const endRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    endRef.current?.scrollIntoView({ behavior: "smooth" });
+        endRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
   }, [logs]);
 
   return (
-    <ClayCard tone="ink" className="min-h-[300px]">
+    <ClayCard tone="ink" className="min-h-0 sm:min-h-[300px]">
       <PanelLabel
         kicker="State Explorer"
         title="TD UPDATE TAPE"
@@ -23,13 +23,13 @@ export function StateLog({ logs }: { logs: TdLogEntry[] }) {
           </span>
         }
       />
-      <div className="relative h-[236px] overflow-auto rounded-clay border-4 border-cream/30 bg-[#070707] p-3 font-mono text-[11px] leading-5 text-lime shadow-clay-deep">
+      <div className="relative h-[200px] overflow-auto rounded-clay border-4 border-cream/30 bg-[#070707] p-2 font-mono text-[11px] leading-5 text-lime shadow-clay-deep sm:h-[236px] sm:p-3">
         <div className="pointer-events-none absolute inset-0 bg-scan" />
         <p className="text-cyan">// s = +me / -opp / .empty · a = cell · δ = TD error</p>
         {logs.map((entry) => {
           const hot = Math.abs(entry.tdError) > 0.25;
           return (
-            <p key={entry.id} className={hot ? "text-hotpink" : "text-lime"}>
+            <p key={entry.id} className={`whitespace-nowrap ${hot ? "text-hotpink" : "text-lime"}`}>
               <span className="text-sun">e{entry.epoch}</span>
               {"  "}
               <span className="text-white/80">{prettyState(entry.state)}</span>

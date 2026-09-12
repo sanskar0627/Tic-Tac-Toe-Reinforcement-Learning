@@ -12,13 +12,13 @@ export function TrainPoster({ games }: { games: number }) {
 
   return (
     <aside className="relative overflow-hidden rounded-plump border-4 border-ink bg-sun px-4 py-4 shadow-plush">
-      <div className="pointer-events-none absolute -right-6 -top-8 h-28 w-28 rotate-12 rounded-full bg-hotpink/30" />
+      <div className="pointer-events-none absolute -right-3 -top-6 h-20 w-20 rotate-12 rounded-full bg-hotpink/30 lg:-right-6 lg:-top-8 lg:h-28 lg:w-28" />
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-ink/60">
+          <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink/60 lg:tracking-[0.22em]">
             Training poster
           </p>
-          <h3 className="font-display text-2xl leading-none sm:text-3xl">
+          <h3 className="max-w-[14ch] font-display text-[1.35rem] leading-[1.05] sm:max-w-none sm:text-3xl sm:leading-none">
             TRAIN IT OR IT STAYS DUMB
           </h3>
         </div>
@@ -43,7 +43,7 @@ export function TrainPoster({ games }: { games: number }) {
             key={step.n}
             className="rounded-clay border-4 border-ink bg-white px-3 py-2 shadow-plush-sm"
           >
-            <p className="font-mono text-[10px] uppercase tracking-[0.16em] text-ink/50">
+            <p className="font-mono text-[10px] uppercase tracking-[0.1em] text-ink/50 lg:tracking-[0.16em]">
               {step.label}
             </p>
             <p className="font-display text-xl leading-none">{step.n}</p>

@@ -41,7 +41,7 @@ export function Board({
         hidden: {},
         show: { transition: { staggerChildren: 0.055 } },
       }}
-      className="grid grid-cols-3 gap-3 rounded-plump border-4 border-ink bg-clay-ice p-3 shadow-clay-deep"
+      className="grid grid-cols-3 gap-2 rounded-plump border-4 border-ink bg-clay-ice p-2 shadow-clay-deep sm:gap-3 sm:p-3"
     >
       {board.map((cell, index) => {
         const mark = symbolFor(cell);
@@ -70,7 +70,7 @@ export function Board({
             onClick={() => onPlay(index)}
             disabled={!isLegal || disabled || winner !== null}
             className={cn(
-              "relative aspect-square min-h-[72px] overflow-hidden rounded-plump border-4 border-ink shadow-plush",
+              "relative aspect-square min-h-0 overflow-hidden rounded-plump border-4 border-ink shadow-plush sm:min-h-[72px]",
               "disabled:cursor-default",
               !heat && (index % 2 === 0 ? "bg-white" : "bg-clay-sand"),
               thinking && isLegal && "animate-pulse-ring",
@@ -96,7 +96,7 @@ export function Board({
             )}
             <span
               className={cn(
-                "font-display text-5xl leading-none tracking-normal sm:text-6xl",
+                "font-display text-4xl leading-none tracking-normal sm:text-6xl",
                 mark === "X" && "text-hotpink",
                 mark === "O" && "text-[#00A8C4]",
                 isLast && "drop-shadow-ink",

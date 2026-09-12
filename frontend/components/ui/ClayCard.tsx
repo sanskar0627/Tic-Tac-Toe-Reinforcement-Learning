@@ -27,9 +27,9 @@ export function ClayCard({
   return (
     <section
       className={cn(
-        "rounded-plump border-4 border-ink shadow-plush",
+        "min-w-0 rounded-plump border-4 border-ink shadow-plush",
         tones[tone],
-        padded && "p-4 sm:p-5",
+        padded && "p-3 sm:p-5",
         className,
       )}
     >
@@ -48,12 +48,12 @@ export function PanelLabel({
   extra?: ReactNode;
 }) {
   return (
-    <div className="mb-3 flex items-end justify-between gap-3">
-      <div>
-        <p className="font-mono text-[10px] uppercase tracking-[0.22em] opacity-70">
+    <div className="mb-3 flex flex-wrap items-start justify-between gap-2 sm:gap-3 lg:items-end">
+      <div className="min-w-0">
+        <p className="font-mono text-[10px] uppercase tracking-[0.12em] opacity-70 lg:tracking-[0.22em]">
           {kicker}
         </p>
-        <h2 className="font-display text-xl leading-none sm:text-2xl">
+        <h2 className="font-display text-lg leading-none sm:text-2xl">
           {title}
         </h2>
       </div>

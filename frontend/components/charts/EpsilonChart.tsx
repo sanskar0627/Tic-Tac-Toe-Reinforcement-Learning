@@ -18,7 +18,7 @@ export function EpsilonChart({ data }: { data: EpochMetric[] }) {
   const latest = data[data.length - 1];
 
   return (
-    <ClayCard tone="sun" className="min-h-[300px]">
+    <ClayCard tone="sun" className="min-h-0 sm:min-h-[300px]">
       <PanelLabel
         kicker="Exploration vs Exploitation"
         title="EPSILON DECAY"
@@ -28,7 +28,7 @@ export function EpsilonChart({ data }: { data: EpochMetric[] }) {
           </span>
         }
       />
-      <div className="h-[220px] rounded-clay border-4 border-ink bg-white p-2 shadow-clay">
+      <div className="h-[190px] rounded-clay border-4 border-ink bg-white p-1 shadow-clay sm:h-[220px] sm:p-2">
         <ResponsiveContainer width="100%" height="100%">
           <ComposedChart data={data} margin={{ top: 12, right: 8, left: -12, bottom: 0 }}>
             <CartesianGrid stroke={chartInk} strokeWidth={1.25} />

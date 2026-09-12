@@ -40,16 +40,16 @@ export function ArenaPanel({
 }: ArenaPanelProps) {
   return (
     <ClayCard tone="white" className="relative">
-      <div className="pointer-events-none absolute -right-8 -top-10 h-32 w-32 rotate-12 rounded-full bg-hotpink/20" />
+      <div className="pointer-events-none absolute -right-4 -top-8 h-24 w-24 rotate-12 rounded-full bg-hotpink/20 lg:-right-8 lg:-top-10 lg:h-32 lg:w-32" />
       <PanelLabel
         kicker="The Pit"
         title="ARENA"
         extra={
-          <div className="flex items-center gap-2">
-            <span className="rounded-pill border-3 border-ink bg-lime px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider shadow-stamp-sm">
+          <div className="flex flex-wrap items-center justify-end gap-2">
+            <span className="rounded-pill border-3 border-ink bg-lime px-2 py-1 font-mono text-[10px] uppercase tracking-wide shadow-stamp-sm sm:px-2.5 sm:tracking-wider">
               You {playerLabel(human)}
             </span>
-            <span className="rounded-pill border-3 border-ink bg-cyan px-2.5 py-1 font-mono text-[10px] uppercase tracking-wider shadow-stamp-sm">
+            <span className="rounded-pill border-3 border-ink bg-cyan px-2 py-1 font-mono text-[10px] uppercase tracking-wide shadow-stamp-sm sm:px-2.5 sm:tracking-wider">
               {thinking ? "Q-scan" : `Turn ${playerLabel(turn)}`}
             </span>
           </div>
@@ -73,7 +73,7 @@ export function ArenaPanel({
               <p className="font-mono text-[10px] uppercase tracking-[0.2em]">
                 {winner === 0 ? "Draw" : winner === human ? "You smash" : "TOEPUNK smash"}
               </p>
-              <p className="font-display text-2xl leading-none">
+              <p className="font-display text-lg leading-none sm:text-2xl">
                 NEXT PIT IN {rebootIn ?? 0}s
               </p>
             </div>

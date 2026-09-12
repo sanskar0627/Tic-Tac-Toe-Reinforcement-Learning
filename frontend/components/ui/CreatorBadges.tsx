@@ -23,7 +23,7 @@ const badges = [
 export function CreatorBadges({ compact = false }: { compact?: boolean }) {
   return (
     <div className={compact ? "grid gap-2" : "grid gap-3"}>
-      <p className="font-mono text-[10px] uppercase tracking-[0.24em] text-ink/70">
+      <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink/70 lg:tracking-[0.24em]">
         Built by
       </p>
       {badges.map((badge) => {
@@ -42,7 +42,7 @@ export function CreatorBadges({ compact = false }: { compact?: boolean }) {
               <Icon className="h-5 w-5" />
             </span>
             <span className="min-w-0">
-              <span className="block font-mono text-[9px] tracking-[0.2em] opacity-70">
+              <span className="block font-mono text-[9px] tracking-[0.12em] opacity-70 lg:tracking-[0.2em]">
                 {badge.label}
               </span>
               <span className="block truncate font-display text-sm leading-none">

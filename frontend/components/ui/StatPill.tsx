@@ -24,7 +24,7 @@ export function StatPill({
         tones[tone],
       )}
     >
-      <p className="font-mono text-[9px] uppercase tracking-[0.18em] opacity-70">
+      <p className="font-mono text-[9px] uppercase tracking-[0.1em] opacity-70 lg:tracking-[0.18em]">
         {label}
       </p>
       <p className="font-display text-lg leading-none">{value}</p>
