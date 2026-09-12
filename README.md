@@ -1,9 +1,5 @@
 <div align="center">
 
-<img src="docs/banner.svg" alt="TOEPUNK — Post the L." width="100%" />
-
-<br />
-
 <img src="docs/mark.svg" alt="TOEPUNK mark" width="88" />
 
 # TOEPUNK
