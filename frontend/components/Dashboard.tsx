@@ -41,17 +41,17 @@ export function Dashboard() {
 
   return (
     <div className="mx-auto grid max-w-[1440px] gap-4 lg:grid-cols-[280px_minmax(0,1fr)]">
-      <div className="hidden lg:contents">{sidebar}</div>
+      <div className="hidden lg:block">{sidebar}</div>
 
-      <div className="order-1 grid min-w-0 gap-4 lg:order-2">
-        <header className="flex flex-col gap-3 rounded-plump border-4 border-ink bg-hotpink px-3 py-3 text-white shadow-plush sm:px-4 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between">
+      <div className="grid min-w-0 gap-4">
+        <header className="flex flex-wrap items-center justify-between gap-3 rounded-plump border-4 border-ink bg-hotpink px-4 py-3 text-white shadow-plush max-lg:flex-col max-lg:items-start max-lg:px-3">
           <div className="min-w-0">
-            <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-white/70 lg:tracking-[0.22em]">
+            <p className="font-mono text-[10px] uppercase tracking-[0.22em] text-white/70 max-lg:tracking-[0.12em]">
               Shipping label · {BRAND.hash}
             </p>
-            <p className="font-display text-[1.35rem] leading-[1.05] sm:text-3xl sm:leading-none">
+            <p className="font-display text-2xl leading-none sm:text-3xl">
               {BRAND.header}{" "}
-              <span className="block lg:inline">{BRAND.hash}</span>
+              <span className="max-lg:block">{BRAND.hash}</span>
             </p>
           </div>
           <p className="max-w-sm font-sans text-[13px] font-medium leading-relaxed text-white/90">
@@ -70,13 +70,12 @@ export function Dashboard() {
             heatmap={arena.heatmap}
             lastMove={arena.lastMove}
             line={arena.line}
-            status={arena.status}
             rebootIn={arena.rebootIn}
             onPlay={arena.play}
             onReset={() => arena.reset()}
             onSwap={arena.swapSides}
           />
-          <div className="contents xl:grid xl:gap-4">
+          <div className="grid gap-4">
             <div className="lg:hidden">{sidebar}</div>
             <OutcomeChart data={metrics} />
             <TrainPoster games={snap.epoch} />

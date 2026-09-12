@@ -35,7 +35,7 @@ export function ClayButton({
       transition={{ type: "spring", stiffness: 520, damping: 28 }}
       disabled={disabled}
       className={cn(
-        "inline-flex items-center justify-center gap-2 rounded-clay border-4 border-ink font-display uppercase tracking-normal shadow-plush-sm lg:tracking-wide",
+        "inline-flex items-center justify-center gap-2 rounded-clay border-4 border-ink font-display uppercase tracking-wide shadow-plush-sm",
         "hover:shadow-plush active:shadow-plush-press",
         size === "md" ? "min-h-11 px-4 py-2.5 text-sm sm:min-h-0" : "min-h-10 px-3 py-1.5 text-[11px] sm:min-h-0",
         tones[tone],

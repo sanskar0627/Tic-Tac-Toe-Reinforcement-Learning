@@ -23,6 +23,13 @@ const mono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   title: `${BRAND.name} — ${BRAND.kicker}`,
   description: BRAND.blurb,
+  icons: {
+    icon: [
+      { url: "/images/favicon.svg", type: "image/svg+xml" },
+      { url: "/images/toepunk-logo.png", type: "image/png" },
+    ],
+    apple: "/images/toepunk-logo.png",
+  },
 };
 
 export const viewport = {

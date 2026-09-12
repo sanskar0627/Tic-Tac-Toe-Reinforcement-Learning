@@ -18,7 +18,7 @@ export function TrainPoster({ games }: { games: number }) {
           <p className="font-mono text-[10px] uppercase tracking-[0.12em] text-ink/60 lg:tracking-[0.22em]">
             Training poster
           </p>
-          <h3 className="max-w-[14ch] font-display text-[1.35rem] leading-[1.05] sm:max-w-none sm:text-3xl sm:leading-none">
+          <h3 className="font-display text-3xl leading-none max-lg:max-w-[14ch] max-lg:text-[1.35rem] max-lg:leading-[1.05]">
             TRAIN IT OR IT STAYS DUMB
           </h3>
         </div>

@@ -48,7 +48,7 @@ export function PanelLabel({
   extra?: ReactNode;
 }) {
   return (
-    <div className="mb-3 flex flex-wrap items-start justify-between gap-2 sm:gap-3 lg:items-end">
+    <div className="mb-3 flex flex-wrap items-end justify-between gap-3 max-lg:items-start max-lg:gap-2">
       <div className="min-w-0">
         <p className="font-mono text-[10px] uppercase tracking-[0.12em] opacity-70 lg:tracking-[0.22em]">
           {kicker}
