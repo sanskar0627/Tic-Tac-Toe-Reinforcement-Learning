@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-cream font-sans text-ink antialiased;
+  word-spacing: 0.06em;
+  background-image:
+    radial-gradient(#111111 1.05px, transparent 1.05px),
+    linear-gradient(180deg, #fff7e2 0%, #ffe8f4 42%, #e8fff6 100%);
+  background-size: 18px 18px, 100% 100%;
+}
+
+.font-display {
+  letter-spacing: 0.04em;
+  word-spacing: 0.16em;
+}
+
+::selection {
+  background: #ffe500;
+  color: #111111;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8ff3d;
+  border: 2px solid #111111;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
